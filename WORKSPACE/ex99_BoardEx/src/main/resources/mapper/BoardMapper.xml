@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.app.domain.mapper.BoardMapper">
+
+	<insert id="Insert" parameterType="com.example.app.domain.dto.BoardDto">
+		insert into tbl_board values(null,#{title},#{contents},#{writer},now())
+	</insert>
+	
+	<update id="Update" parameterType="com.example.app.domain.dto.BoardDto">
+		update tbl_board set title=#{title},contents=#{contents},writer=#{writer} where id=#{id}
+	</update>
+	<delete id="Delete" parameterType="long">
+		delete from tbl_board where id=#{id}
+	</delete>		
+	
+	<select id="SelectOne" parameterType="long" resultType="com.example.app.domain.dto.BoardDto">
+		select * from tbl_board where id=#{id}
+	</select>
+	<select id="SelectAll"  resultType="com.example.app.domain.dto.BoardDto">
+		select * from tbl_board
+	</select>
+	
+
+	
+</mapper>
+
+
+
+
+
+
+

@@ -1,0 +1,5 @@
+com\example\app\Di\DiTests.class
+com\example\app\lombok\lombokTests.class
+com\example\app\controller\controllerTests.class
+com\example\app\DataSource\DataSourceTests.class
+com\example\app\mybatis\MybatisTests.class
